@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    background: linear-gradient(
+        135deg,
+        #210d35,
+        #581c3b,
+        #9b3c24
+    );
+    color: #fff5d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    padding: 35px 25px;
+    text-align: center;
+    background: rgba(40, 12, 40, 0.75);
+    border: 2px solid #ffcc70;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(255, 180, 60, 0.25);
+    animation: appear 1.2s ease;
+}
+
+.diyas {
+    font-size: 45px;
+    margin-bottom: 15px;
+    animation: glow 2s infinite alternate;
+}
+
+.small-heading {
+    color: #ffd98a;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+h1 {
+    font-size: clamp(38px, 9vw, 58px);
+    color: #ffcf70;
+    margin: 18px 0;
+    text-shadow: 0 0 15px #ff9f1c;
+}
+
+h2 {
+    color: #ffe3a5;
+    margin: 18px 0;
+}
+
+.divider {
+    color: #ffc45e;
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.intro {
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 15px 0;
+    color: #fff0dc;
+}
+
+button {
+    margin: 25px 0;
+    padding: 15px 23px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(
+        90deg,
+        #ffb347,
+        #ffcc70
+    );
+    color: #511b27;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 20px #ffcc70;
+}
+
+.hidden {
+    display: none;
+}
+
+#special-wishes {
+    margin-top: 20px;
+    padding: 22px 15px;
+    border-top: 1px solid #ffcc70;
+    animation: appear 1s ease;
+}
+
+#special-wishes p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 17px 0;
+    color: #fff0dc;
+}
+
+#special-wishes h2 {
+    color: #ffd477;
+}
+
+.signature {
+    margin-top: 25px !important;
+}
+
+.name {
+    font-size: 32px;
+    color: #ffcf70 !important;
+}
+
+.developer {
+    font-size: 13px !important;
+    color: #ffc5dc !important;
+}
+
+.bottom-diyas {
+    font-size: 27px;
+    margin: 20px 0;
+}
+
+footer {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 204, 112, 0.4);
+    font-size: 13px;
+    line-height: 2;
+    color: #ffdfa7;
+}
+
+footer span {
+    color: #ffd477;
+}
+
+.stars {
+    color: #ffd477;
+    font-size: 20px;
+    margin-bottom: 10px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #ffcc70;
+    }
+    to {
+        text-shadow: 0 0 20px #ff9f1c;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 28px 17px;
+    }
+
+    .intro {
+        font-size: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
